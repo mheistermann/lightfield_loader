@@ -2,6 +2,10 @@
 name = "lightfield_loader"
 version = "0.1.0"
 authors = ["Martin Heistermann <git@mheistermann.de>"]
+description = "Load lightfields in the format used by the stanford lightfield archive"
+repository = "https://github.com/mheistermann/lightfield_loader"
+readme = "README.md"
+license = "AGPL-3.0"
 
 [dependencies]
 image = "0.10.0"
