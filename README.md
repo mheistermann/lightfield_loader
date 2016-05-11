@@ -4,6 +4,11 @@
 
 Experimental rust crate to load lightfields in the format used by the stanford lightfield archive
 
+
+## Ideas
+
+* Parallelize image decoding
+
 ## License
 
 lightfield_loader was written by Martin Heistermann <github()mheistermann.de>
