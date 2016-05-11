@@ -5,4 +5,4 @@ extern crate log;
 
 pub mod lightfield;
 
-pub use lightfield::{Lightfield, LightfieldView, LightfieldError};
+pub use lightfield::{Lightfield, LightfieldError, LightfieldView};
