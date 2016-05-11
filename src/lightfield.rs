@@ -66,13 +66,13 @@ impl Lightfield {
     pub fn from_zip(zip_filename: &str) -> Result<Lightfield, LightfieldError> {
         let zipfile = try!(File::open(zip_filename));
         let mut archive = try!(zip::ZipArchive::new(zipfile));
-
+        info!("Loading lightfield from {:?}", zip_filename);
         let mut views = Vec::with_capacity(archive.len());
         for i in 0..archive.len()
         {
             let mut file = &mut try!(archive.by_index(i));
             let name = String::from(file.name());
-            println!("loading {}", name);
+            debug!("loading {:?}", name);
             let parts: Vec<&str> = name.split("_").collect();
             if parts.len() < 5 {
                 return Err(LightfieldError::ParseError(format!("Invalid filename '{}'", name)));
