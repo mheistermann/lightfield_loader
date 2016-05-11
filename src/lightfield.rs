@@ -79,10 +79,10 @@ impl Lightfield {
             if parts.len() < 5 {
                 return Err(LightfieldError::ParseError(format!("Invalid filename '{}'", name)));
             }
-            let ix: i32 = try!(parts[1].parse());
-            let iy: i32 = try!(parts[2].parse());
-            let x: f32 = try!(parts[3].parse());
-            let y: f32 = try!(parts[4].parse());
+            let iy: i32 = try!(parts[1].parse());
+            let ix: i32 = try!(parts[2].parse());
+            let y: f32 = try!(parts[3].parse());
+            let x: f32 = try!(parts[4].parse());
             let mut contents = Vec::new();
             try!(file.read_to_end(&mut contents));
 

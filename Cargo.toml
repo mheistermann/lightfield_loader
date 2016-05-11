@@ -5,7 +5,7 @@ license = "AGPL-3.0"
 name = "lightfield_loader"
 readme = "README.md"
 repository = "https://github.com/mheistermann/lightfield_loader"
-version = "0.2.0"
+version = "0.3.0"
 
 [dependencies]
 cgmath = "0.9.1"
