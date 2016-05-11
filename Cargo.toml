@@ -1,13 +1,14 @@
 [package]
-name = "lightfield_loader"
-version = "0.1.0"
 authors = ["Martin Heistermann <git@mheistermann.de>"]
 description = "Load lightfields in the format used by the stanford lightfield archive"
-repository = "https://github.com/mheistermann/lightfield_loader"
-readme = "README.md"
 license = "AGPL-3.0"
+name = "lightfield_loader"
+readme = "README.md"
+repository = "https://github.com/mheistermann/lightfield_loader"
+version = "0.2.0"
 
 [dependencies]
+cgmath = "0.9.1"
 image = "0.10.0"
-zip = "0.1.17"
 log = "0.3.6"
+zip = "0.1.17"

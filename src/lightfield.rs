@@ -1,3 +1,4 @@
+extern crate cgmath;
 extern crate image;
 extern crate zip;
 
@@ -9,9 +10,11 @@ use std::io::Error;
 use std::io::Read;
 use std::fs::File;
 use std::vec::Vec;
+use std::num::{ParseFloatError, ParseIntError};
 
 use zip::result::ZipError;
-use std::num::{ParseFloatError, ParseIntError};
+
+use cgmath::Vector2;
 
 
 #[derive(Debug)]
@@ -49,10 +52,10 @@ impl From<ImageError> for LightfieldError {
 
 pub struct LightfieldView {
     pub image: DynamicImage,
+    /// camera position, assume all cameras on z=0 plane (TODO: generalize?)
+    pub pos: Vector2<f32>,
     pub ix: i32,
     pub iy: i32,
-    pub x: f32,
-    pub y: f32,
 }
 
 pub struct Lightfield {
@@ -88,8 +91,7 @@ impl Lightfield {
                 image: image,
                 ix: ix,
                 iy: iy,
-                x: x,
-                y: y,
+                pos: Vector2::new(x, y),
             });
         }
         Ok(Lightfield { views: views })
