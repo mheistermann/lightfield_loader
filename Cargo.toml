@@ -1,0 +1,9 @@
+[package]
+name = "lightfield_loader"
+version = "0.1.0"
+authors = ["Martin Heistermann <git@mheistermann.de>"]
+
+[dependencies]
+image = "0.10.0"
+zip = "*"
+
